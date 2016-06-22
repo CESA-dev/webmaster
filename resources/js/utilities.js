@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+$
 
 $('#refresh').click(function (){
       var temp = {};
@@ -18,7 +19,6 @@ $('#refresh').click(function (){
          data: temp,
          type: 'GET',
          success: function(data){
-             console.log(data);
             $('#resourceList').html(data);
          }
       });

@@ -3,6 +3,15 @@ a {
     color: #FFFFFF;
 }
 
+.main-body {
+    margin: 10px;
+    padding-top: 100px;
+}
+
 ul {
-    margin-top: 100px;
+    margin-top: 20px;
+}
+
+.resource_title {
+    color: black;
 }
