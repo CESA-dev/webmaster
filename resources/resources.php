@@ -48,7 +48,7 @@ class Resources {
      */
     
     function getData(){
-        $query = "SELECT ID,NAME,VOTE,CREATION_DATE FROM resources";
+        $query = "SELECT ID,NAME,VOTE,CREATION_DATE,LIVING,ACADEMIC,TECHNICAL FROM resources";
         $forged_query = $query . " WHERE";
         $flag = false;    
         if(isset($_GET[RESOURCE_LIVING])){
@@ -88,7 +88,7 @@ class Resources {
             echo "database fault";
             $stmt->close();
         }
-        $stmt->bind_result($id, $name, $vote, $creation_date);
+        $stmt->bind_result($id, $name, $vote, $creation_date, $living, $academic, $technical);
         $stmt->store_result();
         if($stmt->num_rows > 0) {
             echo '<ul class="list-group">';
@@ -98,8 +98,18 @@ class Resources {
                 echo '<div class="media">';
                 echo '<div class="media-body">';
                 echo '<span class="media-meta pull-right">' . date("m-d-Y", $timestamp) . '</span>';
-                echo '<h4><a class="resource_title" href="/uploads/' . strval($id) . '">' . $name;
-                echo '</a><span class="badge pull-right">' . strval($vote) . '</span></h4>';
+                if($living){
+                    echo '<span class = "label label-default">living</span>';
+                }
+                if($academic){
+                    echo '<span class = "label label-default">academic</span>';
+                }
+                if($technical){
+                    echo '<span class = "label label-default">technical</span>';
+                }
+                echo '<h4><a class="resource_title" href="./uploads/' . strval($id) . '">' . $name . '</a>';
+                //echo '<span class="badge pull-right">' . strval($vote) . '</span>';
+                echo '</h4>';
                 echo '</div>';
                 echo '</div>';
                 echo '</li>';
@@ -129,7 +139,7 @@ class Resources {
     function populatePage(){
         echo'<div class="main-body">';
         //checkbox
-        echo '<div>';
+/*       echo '<div>';
         echo '<ul class="list-inline">';
         echo '<li><label>'. RESOURCE_LIVING .'</label><input type="checkbox" unchecked data-toggle="toggle" data-on="Filter" data-off="Ignore" data-onstyle="success" data-offstyle="danger" name="' . RESOURCE_LIVING . '" id="' . RESOURCE_LIVING . '" value="" ></input></li>';
         echo '<li><label>'. RESOURCE_TECHNICAL .'</label><input type="checkbox" unchecked data-toggle="toggle" data-on="Filter" data-off="Ignore" data-onstyle="success" data-offstyle="danger" name="' . RESOURCE_TECHNICAL . '" id="' . RESOURCE_TECHNICAL . '" value="" ></input></li>';
@@ -137,7 +147,7 @@ class Resources {
         echo '</ul>';
         echo '<br/><button type="button" id="refresh">Refresh</button>';
         echo '</div>';
-        
+        */
         echo '<div id="resourceList">';
         $this->getData();
         echo '</div>'; 
@@ -151,6 +161,38 @@ class Resources {
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
     } 
+
+/*
+Following functions are for modification of the contents
+ */
+    /**
+     * @param  string $name      The name of the resource, less than 128 bytes
+     * @param  int    $priority  priority of the resource
+     * @param  bool   $living    whether it belongs to this category (0 or 1) 
+     * @param  bool   $academic  whether it belongs to this category (0 or 1)
+     * @param  bool   $technical whether it belongs to this category (0 or 1)
+     * @return int    0          Fail
+     *                other      id of the resource
+     */
+    function insertData($name, $priority, $living, $academic, $technical) {
+        $query = "INSERT INTO resources (NAME, PRIORITY, LIVING, ACADEMIC, TECHNICAL) VALUES (?,?,?,?,?)";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("sssss", $name, $priority, $living, $academic, $technical);
+        if(!$stmt->execute()){
+            echo "fail to store the data, please inspect your input!";
+            $stmt->close();
+            return 0;
+        }
+        echo "Success!";
+
+        $stmt->close();
+        echo "the id is ".strval($this->conn->insert_id);
+        return $this->conn->insert_id;
+
+
+    }
+
+
 
 }
 //$ss = new Resources();

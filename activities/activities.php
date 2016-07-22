@@ -82,7 +82,10 @@ class Activities {
         
     }
 
-    /**method to populate the page*/
+    /**
+     * A function to populate the activity page.
+     * @return nothing
+     */
     function populateActivitiesPage(){
 
         for($y = 2015; $y <= 2016; $y++){
@@ -99,7 +102,7 @@ class Activities {
                 echo '<div class="col-sm-6 col-md-4">';
                 echo '<div class="thumbnail">';
                 echo '<a href="'.$url.'">';
-                echo '<img src="uploads/'.strval($id).'/thumbnail.png">';
+                echo '<img class="activities_thumb" src="uploads/'.strval($id).'/thumbnail.png">';
                 echo '</a>';
                 echo '<div class="caption post-content">
 
@@ -117,7 +120,10 @@ class Activities {
 
         
     }
-
+    /**
+     * A function to populate the carousel div
+     * @return non
+     */
     function populateActivitiesCarousel(){
         $query = "SELECT * FROM activities ORDER BY CREATEDATE DESC LIMIT 3";
         $stmt = $this->conn->prepare($query);
@@ -132,7 +138,7 @@ class Activities {
             else{
                 echo '<div class="item">';
             }
-            echo '<img class="img-ca" src="uploads/'.strval($id).'/thumbnail.png" class="img-responsive">';
+            echo '<img src="uploads/'.strval($id).'/thumbnail.png" class="img-responsive center-block img-ca" alt="Image Not Available">';
             echo '<div class="carousel-caption">';
             echo '<h3>'.$name.'</h3>';
             echo '</div>';

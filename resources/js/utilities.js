@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-$
 
 $('#refresh').click(function (){
       var temp = {};

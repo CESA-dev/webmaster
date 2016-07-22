@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require_once("activities.php")?>
+<?php require_once("activities.php");?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -36,7 +36,7 @@
                         <a class="page_nav" href="/#introduction">Introduction</a>
                     </li>
                     <li>
-                        <a class="page_nav" href="/activities">Activities</a>
+                        <a class="page_nav" href="/#activities">Activities</a>
                     </li>
 
                     <li>
@@ -45,42 +45,21 @@
                     <li>
                         <a class="page_nav" href="/#news">News</a>
                     </li>
-                    <li class="dropdown">
+                    <!-- <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
 
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="#">doo</a>
                             </li>
-
-
-                            <li>
-                                <a href="#">doo</a>
-                            </li>
-
-
-                            <li>
-                                <a href="#">doo</a>
-                            </li>
-
-
-                            <li>
-                                <a href="#">doo</a>
-                            </li>
-
-
-                            <li>
-                                <a href="#">doo</a>
-                            </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
 
 
             </div>
         </div>
-</nav>
-
+    </nav>
 
 
 
