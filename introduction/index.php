@@ -6,8 +6,7 @@
 <html>
 <head>
 <?php header_default_content(); ?> 
-<script src="./js/table.js"></script>
-    <script src="./js/bootstrap-toggle.min.js"></script>
+
     <title>
         CESA web testpage
     </title>
@@ -55,5 +54,6 @@
             </div>
         </div>
     </nav>
+    <?php body_default_title("introduction"); ?>
     </body>
     </html>

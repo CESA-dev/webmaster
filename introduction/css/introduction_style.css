@@ -17,7 +17,7 @@ a {
  }
 .main-header {
     padding-top: 70px;
-    background: url(../img/IMG_6800.jpg) no-repeat center center fixed;
+    background: url(/img/IMG_6800.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
     -moz-background-size: cover;
       -o-background-size: cover;
