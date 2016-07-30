@@ -52,7 +52,8 @@ $( document ).ready(function() {
 <form id="form" enctype="multipart/form-data" action="processpage.php" method="post">
 活动名，128字符以内 <input type="text" name="name"/><br>
 活动时间，格式yyyy <input type="text" name="year"/><br>
-活动url: <input type="text" name="url"><br>    
+活动url: <input type="text" name="url"/><br>    
+Token:  <input type="text" name="fake_token"/><br>
 <div id="upload-demo"></div>
 <input type="hidden" id="imagebase64" name="imagebase64">
 </form>

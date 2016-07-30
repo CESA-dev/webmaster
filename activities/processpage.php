@@ -1,5 +1,5 @@
-<?php require_once("activities.php")?>
-<html>
+<?php require_once("activities.php"); ?>
+<?php require_once("../lib/utils.php"); ?>
 <head>
     <meta charset="utf-8">
 
@@ -27,6 +27,17 @@ function make_thumb($src, $dest) {
 	
 	/* create the physical thumbnail image to its destination */
 	imagejpeg($virtual_image, $dest, 100);
+}
+
+if(!isset($_POST["fake_token"])){
+    echo "use a good token!";
+    die();
+}
+
+$token = $_POST["fake_token"];
+if(fake_secure($token)){
+    echo "use a good token!";
+    die();
 }
 
 $name = $_POST["name"];

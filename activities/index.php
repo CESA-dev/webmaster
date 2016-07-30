@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <?php require_once("activities.php");?>
+<?php require_once("../lib/template.php");?>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- test compiled and minified CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css"><!-- Optional theme -->
-    <link rel="stylesheet" href="/css/bootstrap-theme.min.css"><!-- Latest compiled and minified JavaScript -->
-    <link rel="stylesheet" href="./css/idx_style.css"><!-- Style sheet for index.html -->
+    
+    <?php header_default_content();?>
 
     
     <link rel="stylesheet" href="./css/activities_style.css"><!-- Style sheet for index.html -->
 
-        <script   src="http://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
-    <script src="/js/bootstrap.min.js"/>
+        
 
     <title>
         CESA web testpage
