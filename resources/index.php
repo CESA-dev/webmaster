@@ -43,9 +43,6 @@
                     <li>
                         <a class="page_nav" href="/#resources">Resources</a>
                     </li>
-                    <li>
-                        <a class="page_nav" href="/#news">News</a>
-                    </li>
                     <!-- <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
 
