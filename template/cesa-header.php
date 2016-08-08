@@ -1,11 +1,29 @@
 <?php
 require_once("cesa-functions.php");
-?>
-<!--
-$title must be pre defined in php
-        title of the webpage
 
--->
+/*
+$title                  can be pre defined in php
+                        title of the webpage
+
+***********************************************************
+
+
+$cssArray               Array of CSS hrefs to add. Optionally defined before including this file
+
+***********************************************************
+
+
+$scriptSourceArray      Array of couples with keys [src, integrity, crossorigin]
+                        src must be defined, other fields are optional
+                        template for scriptSourceArray input:
+
+$scriptSourceArray = array(
+    array('src' => 'xxx', 'integrity' => 'xxx', 'crossorigin' => 'xxx'),
+    array('src' => 'xxx', 'integrity' => 'xxx', 'crossorigin' => 'xxx'),
+    array('src' => 'xxx', 'integrity' => 'xxx', 'crossorigin' => 'xxx')
+);
+*/
+?>
 
  <!DOCTYPE html>
 
@@ -17,13 +35,14 @@ $title must be pre defined in php
      <link rel="stylesheet" href="/css/bootstrap.min.css"><!-- Optional theme -->
      <link rel="stylesheet" href="/css/bootstrap-theme.min.css"><!-- Latest compiled and minified JavaScript -->
      <link rel="stylesheet" href="./css/idx_style.css"><!-- Style sheet for index.html -->
+     <?php if(isset($cssArray))addCSS($cssArray); ?>
 
      <script   src="http://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
-     <script src="/js/bootstrap.min.js">
-     </script>
+     <script src="/js/bootstrap.min.js"></script>
+     <?php if(isset($scriptSourceArray))addScriptSource($scriptSourceArray); ?>
 
      <title>
-        <?php echo($title); ?> | CESA
+        <?php if (isset($title)){echo($title." | CESA");}else{echo 'CESA';}?>
      </title>
  </head>
 

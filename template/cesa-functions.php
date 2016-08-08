@@ -12,5 +12,18 @@ function doNavbarItem(){
     return $ctm->navbarItem($itemArray, $class);
 }
 
+function addCSS($itemArray){
+    global $ctm;
+    if(isset($itemArray)){
+        echo($ctm->css($itemArray));
+    }
+}
+
+function addScriptSource($itemArray){
+    global $ctm;
+    if(isset($itemArray)){
+        echo($ctm->scriptSource($itemArray));
+    }
+}
 
  ?>
