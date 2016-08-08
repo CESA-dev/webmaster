@@ -26,7 +26,7 @@ define('RESOURCE_TECHNICAL', "technical");
 
 class Resources {
 
-    /**
+    /*t*
      * @var conn: connection to database
      */
 
@@ -48,7 +48,7 @@ class Resources {
      */
     
     function getData(){
-        $query = "SELECT ID,NAME,VOTE,CREATION_DATE,LIVING,ACADEMIC,TECHNICAL FROM resources";
+        $query = "SELECT ID,NAME,VOTE,CREATION_DATE,LIVING,ACADEMIC,TECHNICAL,IS_EXTERNAL,EXTERNAL_URL FROM resources";
         $forged_query = $query . " WHERE";
         $flag = false;    
         if(isset($_GET[RESOURCE_LIVING])){
@@ -88,7 +88,7 @@ class Resources {
             echo "database fault";
             $stmt->close();
         }
-        $stmt->bind_result($id, $name, $vote, $creation_date, $living, $academic, $technical);
+        $stmt->bind_result($id, $name, $vote, $creation_date, $living, $academic, $technical, $is_external, $external_url);
         $stmt->store_result();
         if($stmt->num_rows > 0) {
             echo '<ul class="list-group">';
@@ -107,7 +107,13 @@ class Resources {
                 if($technical){
                     echo '<span class = "label label-default">technical</span>';
                 }
-                echo '<h4><a class="resource_title" href="./uploads/' . strval($id) . '">' . $name . '</a>';
+                if($is_external){
+                
+                echo '<h4><a class="resource_title" href="'. $external_url . '">' . $name . '</a>';
+                }
+                else{
+                    echo '<h4><a class="resource_title" href="./uploads/' . strval($id) . '">' . $name . '</a>';
+                }
                 //echo '<span class="badge pull-right">' . strval($vote) . '</span>';
                 echo '</h4>';
                 echo '</div>';
@@ -171,13 +177,15 @@ Following functions are for modification of the contents
      * @param  bool   $living    whether it belongs to this category (0 or 1) 
      * @param  bool   $academic  whether it belongs to this category (0 or 1)
      * @param  bool   $technical whether it belongs to this category (0 or 1)
+     * @param  bool   $is_external whether it links to external url
+     * @param string  $external_url the external url
      * @return int    0          Fail
      *                other      id of the resource
      */
-    function insertData($name, $priority, $living, $academic, $technical) {
-        $query = "INSERT INTO resources (NAME, PRIORITY, LIVING, ACADEMIC, TECHNICAL) VALUES (?,?,?,?,?)";
+    function insertData($name, $priority, $living, $academic, $technical, $is_external, $external_url) {
+        $query = "INSERT INTO resources (NAME, PRIORITY, LIVING, ACADEMIC, TECHNICAL, IS_EXTERNAL, EXTERNAL_URL) VALUES (?,?,?,?,?,?,?)";
         $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("sssss", $name, $priority, $living, $academic, $technical);
+        $stmt->bind_param("sssssss", $name, $priority, $living, $academic, $technical, $is_external, $external_url);
         if(!$stmt->execute()){
             echo "fail to store the data, please inspect your input!";
             $stmt->close();

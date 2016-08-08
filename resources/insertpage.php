@@ -36,7 +36,7 @@ function resource_main(&$message){
              }
              $priority = $_POST["resource_priority"];
              $name = $_POST["resource_name"];
-             $id = $resource_sesson->insertData($name, $priority, $living, $academic, $technical);
+             $id = $resource_sesson->insertData($name, $priority, $living, $academic, $technical, 0, null);
              if(!$id){
                 $message = "cannot add to database";
                 return;
@@ -91,8 +91,51 @@ function resource_main(&$message){
     }
 }
 
+
+function resource_external_link(&$message){
+
+        $token = $_POST["fake_secure"];
+        if(fake_secure($token)){
+            $message = "wrong security token";
+            return;
+        }
+
+             $resource_sesson = new Resources();
+
+             foreach($_POST["resource_category"] as $cate){
+                echo $cate;
+             }
+             $living = 0;
+             $academic = 0;
+             $technical = 0;
+             if(in_array("living", $_POST["resource_category"])){
+                $living = 1;
+             }
+             if(in_array("academic", $_POST["resource_category"])){
+                $academic = 1;
+             }
+             if(in_array("technical", $_POST["resource_category"])){
+                $technical = 1;
+             }
+             $priority = $_POST["resource_priority"];
+             $name = $_POST["resource_name"];
+             $is_external = 1;
+             $external_url = $_POST["external_url"];
+             $id = $resource_sesson->insertData($name, $priority, $living, $academic, $technical, $is_external, $external_url);
+             if(!$id){
+                $message = "cannot add to database";
+                return;
+             }
+}
+
+
 $message = "";
-resource_main($message);
+if(isset($_POST["is_external_source"])){
+    resource_external_link($message);
+}
+else {
+    resource_main($message);
+}
 ?>
 
 <html>
@@ -113,6 +156,11 @@ resource_main($message);
 <label>Choose a zip file to upload: <input type="file" name="zip_file" /></label>
 <label>enter your token: <input type="text" name="fake_secure" /></label>
 <br />
+<label>Is this resource refering an external url? <input type="checkbox" name="is_external_source" value="true"/> </label>
+<br />
+<label>if so please fill the external url <input type="text" name="external_url" /> </label> <br />
+
+
 <input type="submit" name="submit" value="Upload" />
 </form>
 </body>
