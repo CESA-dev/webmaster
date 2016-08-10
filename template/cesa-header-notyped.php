@@ -43,22 +43,6 @@ $scriptSourceArray = array(
      <title>
         <?php if (isset($title)){echo($title." | CESA");}else{echo 'CESA';}?>
      </title>
-     <script src="/js/typed.js"></script>
-     <script>
-     $(function(){
-         $(".typed_element").typed({
-             strings: ["build.", "share.", "PARTY!"],
-             typeSpeed: 0,
-             loop: true,
-             backDelay: 500
-         });
-     });
-
-     $(".page_nav").click(function(){
-         $(".collapse").collapse("hide");
-     });
-
-     </script>
  </head>
 
  <body>
@@ -80,10 +64,4 @@ $scriptSourceArray = array(
             </div>
         </div>
     </nav>
-    <div class="main-header container-fluid">
-        <h1>Chinese Engineering Student Association</h1>
-
-        <h3 class="wrap_typed">
-        We <span class="typed_element"></span>
-        </h3>
     </div>

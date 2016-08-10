@@ -9,6 +9,6 @@
  ?>
 
  <?php
-require("/template/cesa-header.php");
-require("/template/cesa-footer.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-footer.php");
   ?>

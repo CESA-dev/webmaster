@@ -1,5 +1,5 @@
 <?php
-require_once("cesa-theme-methods.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/template/functions/methods/cesa-theme-methods.php");
 
 function doNavbarItem(){
     global $ctm;
