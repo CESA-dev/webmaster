@@ -9,5 +9,6 @@
  ?>
 
  <?php
-require("template/cesa-header.php");
+require("/template/cesa-header.php");
+require("/template/cesa-footer.php");
   ?>

@@ -62,3 +62,13 @@ $scriptSourceArray = array(
                 <ul class="nav navbar-nav">
                     <?php echo(doNavbarItem()); ?>
                 </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main-header container-fluid">
+        <h1>Chinese Engineering Student Association</h1>
+
+        <h3 class="wrap_typed">
+        We <span class="typed_element"></span>
+    </h3>
+    </div>
