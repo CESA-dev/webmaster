@@ -21,7 +21,7 @@ p {
  }
 .main-header {
     padding-top: 70px;
-    background: url(../img/IMG_6800.jpg) no-repeat center center fixed;
+    background: url(/img/IMG_6800.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
     -moz-background-size: cover;
       -o-background-size: cover;
@@ -58,7 +58,7 @@ hr {
     margin-right:auto;
 }
 
-.carousel-inner>.item>img, .img-responsive { 
+.carousel-inner>.item>img, .img-responsive {
     height: 300px;
 }
 
@@ -71,4 +71,3 @@ hr {
     height: 300px;
     width: 300px;
 }
-
