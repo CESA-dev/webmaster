@@ -16,7 +16,7 @@ require_once('../lib/db_interface.php');
 class Activities {
 
     private $conn;
-    
+
     /**
      * the constructor of the object, to connect with the database
      */
@@ -44,9 +44,9 @@ class Activities {
                 $stmt->bind_result($id, $name, $time, $year);
                 while ($stmt->fetch()) {
                     $arr = array('id'=>$id, 'name'=>$name,  'time'=>$time, 'year'=>$year);
-                    $output[$id] = $arr;     
+                    $output[$id] = $arr;
                 }
-                
+
                 $stmt->close();
                 echo json_encode($output);
                 return;
@@ -60,7 +60,7 @@ class Activities {
      * the method to insert data into activites table
      * @param name: the name of the function
      * @param year: the year of the activity
-     * @param url: the url of the page 
+     * @param url: the url of the page
      */
 
     function insertData($name, $year, $url){
@@ -73,13 +73,13 @@ class Activities {
             return 0;
         }
         echo "Success!";
-        
+
 
         $stmt->close();
         echo "the id is ".strval($this->conn->insert_id);
         return $this->conn->insert_id;
-        
-        
+
+
     }
 
     /**
@@ -113,12 +113,12 @@ class Activities {
             }
             echo '</div>';
             echo '</div>';
-            
+
             $stmt->close();
         }
         return;
 
-        
+
     }
     /**
      * A function to populate the carousel div
@@ -162,5 +162,3 @@ class Activities {
 
 
 ?>
-
-
