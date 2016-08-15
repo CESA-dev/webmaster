@@ -16,7 +16,7 @@ require_once('../lib/db_interface.php');
 class Activities {
 
     private $conn;
-    
+
     /**
      * the constructor of the object, to connect with the database
      */
@@ -44,9 +44,9 @@ class Activities {
                 $stmt->bind_result($id, $name, $time, $year);
                 while ($stmt->fetch()) {
                     $arr = array('id'=>$id, 'name'=>$name,  'time'=>$time, 'year'=>$year);
-                    $output[$id] = $arr;     
+                    $output[$id] = $arr;
                 }
-                
+
                 $stmt->close();
                 echo json_encode($output);
                 return;
@@ -60,7 +60,7 @@ class Activities {
      * the method to insert data into activites table
      * @param name: the name of the function
      * @param year: the year of the activity
-     * @param url: the url of the page 
+     * @param url: the url of the page
      */
 
     function insertData($name, $year, $url){
@@ -73,13 +73,13 @@ class Activities {
             return 0;
         }
         echo "Success!";
-        
+
 
         $stmt->close();
         echo "the id is ".strval($this->conn->insert_id);
         return $this->conn->insert_id;
-        
-        
+
+
     }
 
     /**
@@ -88,44 +88,36 @@ class Activities {
      */
     function populateActivitiesPage(){
 
-        for($y = 2015; $y <= 2016; $y++){
+            echo '<ul id="grid">';
+        for($y = 2016; $y >= 2014; $y--){
             $query = "SELECT * FROM activities where HAPPENEDTIME=". strval($y);
 
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
             $stmt->bind_result($id, $name, $time, $year, $url);
-            echo "<div>";
-            echo "<h2>".strval($y) ."</h2>";
-            echo "<hr>";
-            echo '<div class="row">';
             while ($stmt->fetch()) {
-                echo '<div class="col-sm-6 col-md-4">';
-                echo '<div class="thumbnail">';
-                echo '<a href="'.$url.'">';
-                echo '<img class="activities_thumb" src="uploads/'.strval($id).'/thumbnail.png">';
+                echo '<li><a class="grid-cell" href="'.$url.'">';
+                echo '<img class="grid-img" src="uploads/'.strval($id).'/thumbnail.png">';
+                echo '<span class="grid-cover"></span>';
+                echo '<span class="grid-text">'.$name.'</span>';
                 echo '</a>';
-                echo '<div class="caption post-content">
+                echo '</li>';
 
-                <h3>'.$name.'</h3>
-            </div>';
-                echo '</div>';
-                echo '</div>';
             }
-            echo '</div>';
-            echo '</div>';
-            
+
             $stmt->close();
         }
+            echo '</ul>';
         return;
 
-        
+
     }
     /**
      * A function to populate the carousel div
      * @return non
      */
     function populateActivitiesCarousel(){
-        $query = "SELECT * FROM activities ORDER BY CREATEDATE DESC LIMIT 3";
+        $query = "SELECT * FROM activities ORDER BY CREATEDATE DESC";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         $stmt->bind_result($id, $name, $time, $year, $url);
@@ -162,5 +154,3 @@ class Activities {
 
 
 ?>
-
-

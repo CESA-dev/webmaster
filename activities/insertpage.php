@@ -23,13 +23,12 @@ $( document ).ready(function() {
 
     $uploadCrop = $('#upload-demo').croppie({
         viewport: {
-            width: 200,
-            height: 200,
-            type: 'circle'
+            width: 800,
+            height: 600
         },
         boundary: {
-            width: 300,
-            height: 300
+            width: 900,
+            height: 700
         }
     });
 
