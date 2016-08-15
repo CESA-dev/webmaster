@@ -64,4 +64,3 @@ $scriptSourceArray = array(
             </div>
         </div>
     </nav>
-    </div>

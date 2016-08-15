@@ -88,34 +88,26 @@ class Activities {
      */
     function populateActivitiesPage(){
 
-        for($y = 2015; $y <= 2016; $y++){
+            echo '<ul id="grid">';
+        for($y = 2016; $y >= 2014; $y--){
             $query = "SELECT * FROM activities where HAPPENEDTIME=". strval($y);
 
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
             $stmt->bind_result($id, $name, $time, $year, $url);
-            echo "<div>";
-            echo "<h2>".strval($y) ."</h2>";
-            echo "<hr>";
-            echo '<div class="row">';
             while ($stmt->fetch()) {
-                echo '<div class="col-sm-6 col-md-4">';
-                echo '<div class="thumbnail">';
-                echo '<a href="'.$url.'">';
-                echo '<img class="activities_thumb" src="uploads/'.strval($id).'/thumbnail.png">';
+                echo '<li><a class="grid-cell" href="'.$url.'">';
+                echo '<img class="grid-img" src="uploads/'.strval($id).'/thumbnail.png">';
+                echo '<span class="grid-cover"></span>';
+                echo '<span class="grid-text">'.$name.'</span>';
                 echo '</a>';
-                echo '<div class="caption post-content">
+                echo '</li>';
 
-                <h3>'.$name.'</h3>
-            </div>';
-                echo '</div>';
-                echo '</div>';
             }
-            echo '</div>';
-            echo '</div>';
 
             $stmt->close();
         }
+            echo '</ul>';
         return;
 
 
@@ -125,7 +117,7 @@ class Activities {
      * @return non
      */
     function populateActivitiesCarousel(){
-        $query = "SELECT * FROM activities ORDER BY CREATEDATE DESC LIMIT 3";
+        $query = "SELECT * FROM activities ORDER BY CREATEDATE DESC";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         $stmt->bind_result($id, $name, $time, $year, $url);
