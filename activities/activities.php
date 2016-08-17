@@ -86,6 +86,7 @@ class Activities {
      * A function to populate the activity page.
      * @return nothing
      */
+    function populateActivitiesPage() {
             echo '<ul id="grid">';
         for($y = 2016; $y >= 2014; $y--){
             $query = "SELECT * FROM activities where HAPPENEDTIME=". strval($y);
