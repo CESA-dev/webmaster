@@ -86,8 +86,6 @@ class Activities {
      * A function to populate the activity page.
      * @return nothing
      */
-    function populateActivitiesPage(){
-
             echo '<ul id="grid">';
         for($y = 2016; $y >= 2014; $y--){
             $query = "SELECT * FROM activities where HAPPENEDTIME=". strval($y);
@@ -117,7 +115,7 @@ class Activities {
      * @return non
      */
     function populateActivitiesCarousel(){
-        $query = "SELECT * FROM activities ORDER BY CREATEDATE DESC";
+        $query = "SELECT * FROM activities ORDER BY CREATEDATE DESC LIMIT 3";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         $stmt->bind_result($id, $name, $time, $year, $url);
@@ -130,7 +128,7 @@ class Activities {
             else{
                 echo '<div class="item">';
             }
-            echo '<img src="uploads/'.strval($id).'/thumbnail.png" class="img-responsive center-block img-ca" alt="Image Not Available">';
+            echo '<a href="'.$url.'"><img src="uploads/'.strval($id).'/thumbnail.png" class="img-responsive center-block img-ca" alt="Image Not Available"></a>';
             echo '<div class="carousel-caption">';
             echo '<h3>'.$name.'</h3>';
             echo '</div>';
@@ -151,6 +149,13 @@ class Activities {
 //$act->insertData("foo", "啦啦");
 //$act->getData("all");
 //
+
+
+
+
+
+
+
 
 
 ?>

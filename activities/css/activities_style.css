@@ -61,16 +61,16 @@ hr {
     margin-left: auto;
     margin-right:auto;
 }
-
-.carousel-inner>.item>img, .img-responsive {
-    height: 300px;
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    height: auto;
+    width: 100%;
 }
-
+/*
 .img-ca {
     width: auto;
     height: 300px;
 }
-
+*/
 .activities_thumb {
     height: 300px;
     width: 300px;
