@@ -39,7 +39,7 @@ $scriptSourceArray = array(
      <script   src="http://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
      <script src="/js/bootstrap.min.js"></script>
      <?php if(isset($scriptSourceArray))addScriptSource($scriptSourceArray); ?>
-
+    <?php addGoogleAnalyticsScript("UA-82745997-1");?>
      <title>
         <?php if (isset($title)){echo($title." | CESA");}else{echo 'CESA';}?>
      </title>
@@ -52,7 +52,7 @@ $scriptSourceArray = array(
 
 
              <div class="navbar-header">
-                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">☰<span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="#">CESA</a>
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">☰<span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="/">CESA</a>
              </div>
              <!-- Collect the nav links, forms, and other content for toggling -->
 
