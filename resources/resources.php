@@ -109,7 +109,7 @@ class Resources {
                 }
                 if($is_external){
                 
-                echo '<h4><a class="resource_title" href="'. $external_url . '">' . $name . '</a>';
+                echo '<h4><a class="resource_title" href="'. $external_url . '" onclick="trackOutboundLink(\'' . $external_url . '\'); return false; ">' . $name . '</a>';
                 }
                 else{
                     echo '<h4><a class="resource_title" href="./uploads/' . strval($id) . '">' . $name . '</a>';
