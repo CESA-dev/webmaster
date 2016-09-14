@@ -43,7 +43,9 @@ hr {
     border-width  : 1px;
     }
 
-
+.navbar .navbar-dark .bg-primary .navbar-fixed-top{
+    background-color: #0197f6;
+}
 
 #cesaqr {
     display: block;

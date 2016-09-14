@@ -1,6 +1,24 @@
 <hr>
-<h3 align="center">关注我们的微信公众号</h3>
+<h2 align="center" style="font-size: 44px;">Follow Us On Wechat</h2>
 <img id="cesaqr" src="/img/qrcode_for_gh_f3a5ec0968b5_430.jpg">
+<h2 align="center" style="font-size: 44px;">Special Thanks To Our Sponsors</h2>
+<div class="container">
+
+<?php 
+$dir = new DirectoryIterator($_SERVER["DOCUMENT_ROOT"]."/img/sponsors/");
+foreach ($dir as $fileinfo) {
+    if (!$fileinfo->isDot()) {
+        //var_dump($fileinfo->getFilename());
+        echo '<div class="col-sm-4 col-xs-12 col-lg-3">';
+        echo '<div class="image">';
+     echo '<img src="/img/sponsors/'. $fileinfo->getFilename().'" 
+         class="img img-responsive full-width">';
+        echo '</div>';
+    echo '</div>';
+    }
+}
+?>
+</div>
 <style> #cesaqr {
                     display: block;
                     width : 40%;
@@ -9,6 +27,19 @@
                     margin-left: auto;
                     margin-right:auto;
                 }
+.image{
+    position:relative;
+    overflow:hidden;
+    padding-bottom:100%;
+}
+.image img{
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+}
 </style>
 
 
