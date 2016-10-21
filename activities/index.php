@@ -4,7 +4,7 @@
 $title = "Activities";
 $cssArray = array("./css/activities_style.css", "./css/grid_style.css");
  ?>
-<?php require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-header-notyped.php"); ?>
+<?php require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-header.php"); ?>
 
 
 <div class="spacer">

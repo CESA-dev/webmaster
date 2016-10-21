@@ -6,7 +6,7 @@ $scriptSourceArray = array(
     array('src' => './js/bootstrap-toggle.min.js')
 );
  ?>
-<?php require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-header-notyped.php"); ?>
+<?php require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-header.php"); ?>
 <?php require_once("resources.php"); ?>
 
 

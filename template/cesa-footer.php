@@ -9,7 +9,7 @@ $dir = new DirectoryIterator($_SERVER["DOCUMENT_ROOT"]."/img/sponsors/");
 foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
         //var_dump($fileinfo->getFilename());
-        echo '<div class="col-sm-4 col-xs-12 col-lg-3">';
+        echo '<div class="col-sm-3 col-xs-6 col-lg-2">';
         echo '<div class="image">';
      echo '<img src="/img/sponsors/'. $fileinfo->getFilename().'" 
          class="img img-responsive full-width">';

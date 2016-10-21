@@ -4,7 +4,7 @@ $cssArray = array("./css/idx_style.css");
  ?>
 <?php require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-header.php"); ?>
 
-<div class="container">
+<div class="row">
     <div id="introduction" class="col-md-4">
         <div>
             <h1 class="display-3">Introduction</h1>
