@@ -3,30 +3,37 @@ a {
 }
 
 .member1{
-    padding-top: 70px;
+    padding-top: 0px;
     padding-bottom: 70px;
     background-color: #F2F2F2;
 
 }
 .member0{
-    padding-top: 70px;
+    padding-top: 0px;
     padding-bottom: 70px;
     background-color: #FFFFFF;
 
 }
 
 .membername{
-    font-size: 40px;
+    font-size: 20px;
 
 }
 
-.memberattribute{
+.departmentname{
+    padding-left: 10px;
     font-size: 30px;
+}
+
+.memberattribute{
+    font-size: 18px;
 
 }
 
 .memberintro{
-    font-size: 25px;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: 15px;
 
 }
 
@@ -89,7 +96,7 @@ a {
 }
 .image-cropper {
   width: 250px;
-    height: 250px; 
+    height: 250px;
     position: relative;
     overflow: hidden;
     -webkit-border-radius: 50%;
