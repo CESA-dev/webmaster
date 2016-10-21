@@ -34,7 +34,8 @@ $scriptSourceArray = array(
      <meta name="viewport" content="width=device-width, initial-scale=1"><!-- test compiled and minified CSS -->
      <link rel="stylesheet" href="/css/bootstrap.min.css"><!-- Optional theme -->
      <link rel="stylesheet" href="/css/bootstrap-theme.min.css"><!-- Latest compiled and minified JavaScript -->
-     <link rel="icon" href="/img/cesa_logo.gif"> 
+     <link rel="stylesheet" href="/css/custom_class.css"><!-- CSS for custom classes -->
+     <link rel="icon" href="/img/cesa_logo.gif">
     <?php if(isset($cssArray))addCSS($cssArray); ?>
 
      <script   src="http://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
