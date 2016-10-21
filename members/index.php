@@ -7,7 +7,7 @@ $cssArray = array("./css/members_style.css");
     function doMembers($fileName){
         # Department type is index 5 #
 
-        echo '<div class="container">';
+        #echo '<div class="container">';
         $mydict = [];
         if(($handle = fopen($fileName, 'r')) !== FALSE){
             $num = 0;
@@ -24,7 +24,7 @@ $cssArray = array("./css/members_style.css");
             }
         }
 
-        echo '</div>';
+        #echo '</div>';
 
     }
 
@@ -80,9 +80,7 @@ EOD;
  ?>
  <div id="Member Title" class="main-title">
 
-        <h1 class="display-3">Executive Board</h1>
-
     </div>
  <?php doMembers("members.csv"); ?>
 
- <?php require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-footer.php"); ?>
+ <!-- <?php require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-footer.php"); ?> -->
