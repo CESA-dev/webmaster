@@ -37,7 +37,7 @@ $cssArray = array("./css/members_style.css");
         echo <<<EOD
             <div class="col-md-4">
                 <a href="#">
-                    <img class="img-responsive" src="./img/board_thumbnail/$num.jpg.thumbnail" alt="">
+                    <img class="img-circle" src="./img/board_thumbnail/$num.jpg.thumbnail.cropped" alt="">
                 </a>
             </div>
             <div class="col-md-8">
