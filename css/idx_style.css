@@ -67,4 +67,13 @@ hr {
     margin-right:auto;
     text-align:center;
 }
+#main-page-launchpad{
+    display: table;
+}
+
+#main-page-launchpad .panel {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
 
