@@ -1,0 +1,9 @@
+.center-align {
+    text-align: center;
+}
+
+IMG.center-align {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
