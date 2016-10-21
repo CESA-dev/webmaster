@@ -5,9 +5,10 @@ function doNavbarItem(){
     global $ctm;
     $class = 'page_nav';
     $itemArray = array(
-        array('text' => 'Introduction', 'href' => '/#introduction'),
-        array('text' => 'Activities', 'href' => '/#activities'),
-        array('text' => 'Resources', 'href' => '/#resources')
+        array('text' => 'Introduction', 'href' => '/introduction'),
+        array('text' => 'Activities', 'href' => '/activities'),
+        array('text' => 'Resources', 'href' => '/resources'),
+        array('text' => 'Executive Board', 'href' => '/members')
     );
     return $ctm->navbarItem($itemArray, $class);
 }

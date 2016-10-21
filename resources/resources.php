@@ -8,8 +8,8 @@ function fooo(){
 }
 
 
-require_once('../config.php');
-require_once('../lib/db_interface.php');
+require_once($_SERVER["DOCUMENT_ROOT"] . '/config.php');
+require_once($_SERVER["DOCUMENT_ROOT"] . '/lib/db_interface.php');
 
 
 define('RESOURCE_LIVING', "living");

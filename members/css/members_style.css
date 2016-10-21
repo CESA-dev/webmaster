@@ -1,0 +1,100 @@
+a {
+    color: #FFFFFF;
+}
+
+.member1{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #F2F2F2;
+
+}
+.member0{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #FFFFFF;
+
+}
+
+.membername{
+    font-size: 40px;
+
+}
+
+.memberattribute{
+    font-size: 30px;
+
+}
+
+.memberintro{
+    font-size: 25px;
+
+}
+
+.typed_element{
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+ }
+
+ .wrap_typed{
+     font-size: 44px;
+     text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+     text-align: center;
+ }
+.main-header {
+    padding-top: 70px;
+    background: url(/img/IMG_6800.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+        background-size: cover;
+    min-height: 300px;
+}
+
+.main-title {
+
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 100px;
+    padding-right: 0px;
+    border-radius: 0px;
+
+    background-color: #ffffff;
+
+}
+
+.jumbotron {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 0px;
+
+    background-color: #ffffff;
+}
+
+.jumbotron2 {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 0px;
+
+    background-color: #F2F2F2;
+}
+
+hr {
+    display       : block;
+    margin-top    : 0.5em;
+    margin-bottom : 0.5em;
+    margin-left   : 5%;
+    margin-right  : 5%;
+    border-style  : inset;
+    border-width  : 1px;
+
+    }
