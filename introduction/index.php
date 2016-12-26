@@ -1,6 +1,6 @@
 <?php
 $title = "Introduction";
-$cssArray = array("./css/introduction_style.css");
+$cssArray = array("./css/introduction_style.css", "../css/idx_style.css");
  ?>
 <?php require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-header.php"); ?>
 
@@ -12,7 +12,7 @@ $cssArray = array("./css/introduction_style.css");
     </div>
 
 
-    <div class="jumbotron">
+    <div class="jumbotron1">
         <p class="lead">Chinese Engineering Student Association is committed to provide high-quality services and resources to help Chinese Engineering students on campus to achieve their academic and career goals.</p>
         </p>
     </div>
@@ -27,7 +27,7 @@ $cssArray = array("./css/introduction_style.css");
 
     </div>
 
-    <div  class="jumbotron">
+    <div  class="jumbotron1">
 
 
         <p class="lead">First of all, CESA will build a platform for Chinese engineering students to share their study experiences and resources by collecting resources from students who are taking or have taken different engineering courses in their curriculum. All membership of CESA can use these resources and have responsibility to share their own resources. Nonetheless, we object to pure duplication of homework and projects while encouraging original work and ideas.</p>
@@ -48,7 +48,7 @@ $cssArray = array("./css/introduction_style.css");
 
     </div>
 
-    <div class="jumbotron">
+    <div class="jumbotron1">
 
 
         <p class="lead">In addition, each semester, we will invite professors from the Engineering Department and representatives from corporations in the field to give speeches. Through the speeches, our members will not only learn the current trends in the Engineering field, but also build network with prospective employers. Moreover, these speeches can be opportunities of researches and internship as well as answers to questions about future study and career for students.

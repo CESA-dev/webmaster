@@ -2,7 +2,7 @@
 
 <?php
 $title = "Activities";
-$cssArray = array("./css/activities_style.css", "./css/grid_style.css");
+$cssArray = array("./css/activities_style.css", "./css/grid_style.css", "../css/idx_style.css");
  ?>
 <?php require($_SERVER["DOCUMENT_ROOT"] . "/template/cesa-header.php"); ?>
 

@@ -19,22 +19,25 @@ a {
      text-align: center;
  }
 .main-header {
-    padding-top: 70px;
-    background: url(../img/IMG_6800.jpg) no-repeat center center fixed;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background: url(../img/dudu.png) no-repeat center center fixed;
   -webkit-background-size: cover;
     -moz-background-size: cover;
       -o-background-size: cover;
         background-size: cover;
-    min-height: 300px;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+    min-height: 800px;
 }
-.jumbotron {
+/*.jumbotron {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-}
+}*/
 
 hr {
     display       : block;

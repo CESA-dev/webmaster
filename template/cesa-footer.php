@@ -21,7 +21,9 @@ foreach ($dir as $fileinfo) {
 </div>
 <style> #cesaqr {
                     display: block;
-                    width : 40%;
+                    max-width: 300px;
+                    height: auto;
+                    /*width : 40%;*/
                     margin-top: 0.5em;
                     margin-bottom: 0.5em;
                     margin-left: auto;

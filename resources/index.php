@@ -1,6 +1,6 @@
 <?php
 $title = "Resources";
-$cssArray = array("./css/bootstrap-toggle.min.css", "./css/style.css");
+$cssArray = array("./css/bootstrap-toggle.min.css", "./css/style.css", "../css/idx_style.css");
 $scriptSourceArray = array(
     array('src' => './js/table.js'),
     array('src' => './js/bootstrap-toggle.min.js')
