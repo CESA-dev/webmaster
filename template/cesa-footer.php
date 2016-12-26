@@ -1,4 +1,4 @@
-<hr>
+<!-- <hr> -->
 <h2 align="center" style="font-size: 44px;">Follow Us On Wechat</h2>
 <img id="cesaqr" src="/img/qrcode_for_gh_f3a5ec0968b5_430.jpg">
 <h2 align="center" style="font-size: 44px;">Special Thanks To Our Sponsors</h2>
