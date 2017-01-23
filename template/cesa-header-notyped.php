@@ -37,7 +37,7 @@ $scriptSourceArray = array(
      <link rel="icon" href="/img/cesa_logo.gif"> 
      <?php if(isset($cssArray))addCSS($cssArray); ?>
 
-     <script   src="http://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
      <script src="/js/bootstrap.min.js"></script>
      <?php if(isset($scriptSourceArray))addScriptSource($scriptSourceArray); ?>
     <?php addGoogleAnalyticsScript("UA-82745997-1");?>

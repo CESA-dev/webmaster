@@ -37,11 +37,11 @@
          * @param  string   $class      class for list items
          * @return string               html formated string for list items
          */
-        function navbarItem($itemArray, $class){
+        function navbarItem($itemArray){
             $nav = "";
             foreach ($itemArray as $item) {
                 # code...
-                $nav .= '<li><a class="'.$class.'" href="'.$item["href"].'">'.$item["text"].'</a></li>';
+                $nav .= '<li><a class="'.$item["class"].'" href="'.$item["href"].'">'.$item["text"].'</a></li>';
             }
             return $nav;
         }

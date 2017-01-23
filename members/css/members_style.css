@@ -6,6 +6,11 @@ body {
     background-color: rgb(175, 184, 193);
 }
 
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .member1{
     padding-top: 0px;
     padding-bottom: 70px;

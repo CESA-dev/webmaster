@@ -3,14 +3,14 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/template/functions/methods/cesa-theme
 
 function doNavbarItem(){
     global $ctm;
-    $class = 'page_nav';
+    
     $itemArray = array(
-        array('text' => 'Introduction', 'href' => '/introduction'),
-        array('text' => 'Activities', 'href' => '/activities'),
-        array('text' => 'Resources', 'href' => '/resources'),
-        array('text' => 'Executive Board', 'href' => '/members')
+        array('text' => 'Introduction', 'href' => '/introduction', 'class' => 'page_nav'),
+        array('text' => 'Activities', 'href' => '/activities', 'class' => 'page_nav'),
+        array('text' => 'Resources', 'href' => '/resources', 'class' => 'page_nav'),
+        array('text' => 'Members', 'href' => '/members', 'class' => 'page_nav')
     );
-    return $ctm->navbarItem($itemArray, $class);
+    return $ctm->navbarItem($itemArray);
 }
 
 function addCSS($itemArray){
