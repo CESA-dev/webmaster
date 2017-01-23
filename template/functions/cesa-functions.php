@@ -8,7 +8,11 @@ function doNavbarItem(){
         array('text' => 'Introduction', 'href' => '/introduction', 'class' => 'page_nav'),
         array('text' => 'Activities', 'href' => '/activities', 'class' => 'page_nav'),
         array('text' => 'Resources', 'href' => '/resources', 'class' => 'page_nav'),
-        array('text' => 'Members', 'href' => '/members', 'class' => 'page_nav')
+        array('text' => 'Members', 'href' => '/', 'class' => 'dropdown-toggle', 
+        'child' => array(
+            array('text' => 'Board', 'href' => '/members/board', 'class' => 'page_nav'),
+             array('text' => 'All Members', 'href' => '/members/all', 'class' => 'page_nav')
+            ))
     );
     return $ctm->navbarItem($itemArray);
 }

@@ -1,0 +1,138 @@
+a {
+    color: #FFFFFF;
+}
+
+body {
+    background-color: rgb(175, 184, 193);
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.member1{
+    padding-top: 0px;
+    padding-bottom: 70px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgba(120, 151, 186, 0.77);
+
+}
+.member0{
+    padding-top: 0px;
+    padding-bottom: 70px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgb(175, 184, 193);
+
+}
+
+.membername{
+    font-size: 20px;
+
+}
+
+.departmentname{
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+.memberattribute{
+    font-size: 18px;
+
+}
+
+.memberintro{
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: 15px;
+
+}
+
+.typed_element{
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+ }
+
+ .wrap_typed{
+     font-size: 44px;
+     text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+     text-align: center;
+ }
+.main-header {
+    padding-top: 70px;
+    background: url(/img/IMG_6800.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+        background-size: cover;
+    min-height: 300px;
+}
+
+.main-title {
+
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 100px;
+    padding-right: 0px;
+    border-radius: 0px;
+
+    background-color: #ffffff;
+
+}
+
+.jumbotron {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 0px;
+
+    background-color: #ffffff;
+}
+
+.jumbotron2 {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 0px;
+
+    background-color: #F2F2F2;
+}
+.image-cropper {
+  width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*.img-circle{
+    max-height: 100px;
+    overflow:hidden;
+    height: auto;
+    width: auto;
+}*/
+
+hr {
+    display       : block;
+    margin-top    : 0.5em;
+    margin-bottom : 0.5em;
+    margin-left   : 5%;
+    margin-right  : 5%;
+    border-style  : inset;
+    border-width  : 1px;
+
+    }

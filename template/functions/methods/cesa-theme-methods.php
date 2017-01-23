@@ -40,8 +40,18 @@
         function navbarItem($itemArray){
             $nav = "";
             foreach ($itemArray as $item) {
-                # code...
-                $nav .= '<li><a class="'.$item["class"].'" href="'.$item["href"].'">'.$item["text"].'</a></li>';
+                
+                if (isset($item["child"])){
+                    $nav .= '<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'. $item["text"] .'</a>';
+                    $nav .= '<ul class="dropdown-menu">';
+                    $nav .= $this->navbarItem($item["child"]);
+                    $nav .= '</ul></li>';
+                }
+                else {
+                    $nav .= '<li><a class="'.$item["class"].'" href="'.$item["href"].'">'.$item["text"].'</a></li>';
+                }
+                    
             }
             return $nav;
         }

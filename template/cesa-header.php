@@ -89,4 +89,5 @@ $scriptSourceArray = array(
         <h3 class="wrap_typed">
         We <span class="typed_element"></span>
         </h3>
+        <h2><?php echo($title) ?></h2>
     </div>
